@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+class Main{
+
+    static boolean isPrime(int n){
+         
+        for(int i=2;i*i<=n;i++){
+            if(n%i==0){
+                return false;
+            }   
+        }
+        return true;   
+    }
+    static void PrimeNumbers(int n){
+        for(int i=2;i<=n;i++){
+            if(isPrime(i)){
+                System.out.println(i);
+            }
+        }
+    }
+
+    public static void main(String[] args){
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Enter Number : ");
+        int n = scan.nextInt();
+
+        PrimeNumbers(n);
+    }
+}
